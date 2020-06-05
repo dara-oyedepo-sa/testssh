@@ -10,7 +10,7 @@ phases:
       - npm install time
       - export BUCKET=simple-serveless-pipeline-s3
       - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
-      - python -m pytest indextest.py
+      - python -m pytest indextest.py --junitxml=out_report.xml
 artifacts:
   type: zip
   files:
@@ -19,4 +19,4 @@ artifacts:
 reports:
   simple-pipeline-test-reports:
     files:
-      - '**/*'
+      - 'out_report.xml'
