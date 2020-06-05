@@ -16,3 +16,9 @@ artifacts:
   files:
     - template.yml
     - outputtemplate.yml
+reports:
+  simple-pipeline-test-reports:
+    files:
+      - '**/*'
+    base-directory: 'target/all-reports'
+    discard-paths: false
