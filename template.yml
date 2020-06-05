@@ -15,15 +15,4 @@ Resources:
             Path: /TimeResource
             Method: GET
             
-  NewHelloFunction:
-    Type: AWS::Serverless::Function
-    Properties:
-      Handler: indexb.lambda_handler
-      Runtime: python3.7
-      CodeUri: ./
-      Events:
-        MyHiApi:
-          Type: Api
-          Properties:
-            Path: /TimeResource
-            Method: GET
+
