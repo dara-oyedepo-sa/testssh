@@ -18,11 +18,11 @@ Resources:
   NewHelloFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: indexb.handler
+      Handler: indexb.lambda_handler
       Runtime: python3.7
       CodeUri: ./
       Events:
-        MyTimeApi:
+        MyHiApi:
           Type: Api
           Properties:
             Path: /TimeResource
