@@ -19,4 +19,4 @@ artifacts:
 reports:
   simple-pipeline-test-reports:
     files:
-      - my-test-report-file.json
+      - '**/*'
