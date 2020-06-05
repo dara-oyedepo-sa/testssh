@@ -14,3 +14,16 @@ Resources:
           Properties:
             Path: /TimeResource
             Method: GET
+            
+  NewHelloFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: indexb.handler
+      Runtime: python3.7
+      CodeUri: ./
+      Events:
+        MyTimeApi:
+          Type: Api
+          Properties:
+            Path: /TimeResource
+            Method: GET
